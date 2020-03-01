@@ -5,6 +5,7 @@ This project was done from scratch with HTML5, CSS3 (Flexbox and GRID) and a lit
 Main features:
 * All navbar items are hoverable. 
 * Photos are automatically changed every 2s.
-* "Showe more...!" buttons become "sticky" once clicked.
+* "Showe more...!" button becomes "sticky" once clicked.
+* All photos are taken from pexel.com - website which provides photos that are free to use for individuals and companies.
 
 You can see this page under the link -> https://jankee1.github.io/Travel-Web/
