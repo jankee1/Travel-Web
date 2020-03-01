@@ -1,3 +1,48 @@
+// ---------------------------- Hamburger Menu 
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+hamburgerMenu.addEventListener('click', () => {
+    const crossLines = document.querySelectorAll('.cross-lines');
+    const menuBackground = document.querySelector('.hamburger-menu-background');
+    const mobileMenu = document.querySelector('.menu-box');
+    const body = document.querySelector('body')
+    
+    crossLines.forEach( item => {
+            if(item.classList.contains('cross1')) {
+                item.classList.remove('cross1');
+                item.classList.add('cross1-menu-shown');
+                // the below shows the mobile menu
+                menuBackground.style = 'left: 0;';
+                mobileMenu.style = 'left: 0;';
+                body.style = 'overflow: hidden;'
+                
+            } else if(item.classList.contains('cross1-menu-shown')) {
+                item.classList.remove('cross1-menu-shown');
+                item.classList.add('cross1');
+                // the below hides the mobile menu
+                menuBackground.style = 'left: -800vh;';
+                mobileMenu.style = 'left: -800vh;';
+                body.style = 'overflow: none;';
+            }
+        
+            if(item.classList.contains('cross2')) {
+                item.classList.remove('cross2');
+                item.classList.add('cross2-menu-shown');
+            } else if(item.classList.contains('cross2-menu-shown')) {
+                item.classList.remove('cross2-menu-shown');
+                item.classList.add('cross2');
+            }
+        
+            if(item.classList.contains('cross3')) {
+                item.classList.remove('cross3');
+                item.classList.add('cross3-menu-shown');
+            } else if(item.classList.contains('cross3-menu-shown')) {
+                item.classList.remove('cross3-menu-shown');
+                item.classList.add('cross3');
+            } 
+    })
+    
+})
+
 const galleryPhotos = document.querySelectorAll('.photos-gallery'); 
 let photoNumber = 0;
 
