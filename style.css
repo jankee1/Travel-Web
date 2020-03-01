@@ -41,7 +41,11 @@ li {
 }
 .navbar {
     display: grid;
-    grid-template-columns: 100px repeat(5, minmax(auto, 1fr));
+    grid-template-columns: 100px 1fr;
+}
+.navbar .menu-box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 .navbar div {
     display: grid;
@@ -56,23 +60,24 @@ li {
     text-align: center;
     margin: auto;
     color: rgba(265,155,0,0.6);
-    -webkit-transition: transform 0.35s ease-in-out;
+    transition: all 0.8s;
 }
 .navbar .home-icon div:hover {
     cursor: pointer;
-
 }
 .navbar .home-icon div:hover i {
     color: rgba(265,155,0,1);
     transform: rotate(360deg);
-    -webkit-transition: transform 0.35s ease-in-out;
+    transition: all 0.8s;
 }
 .navbar button {
     font-size: 1.4rem;
     background: rgba(0,0,0,0);
     color: #fff;
     border: none;
-    text-transform:uppercase
+    text-transform:uppercase;
+    transition: all 0.8s;
+        
 }
 .navbar button:hover {
     background: rgba(265,155,0,0.7);
@@ -87,6 +92,7 @@ li {
 .navbar li:hover {
     cursor: pointer;
     background: rgba(265,155,0,0.7);
+    transition: all 0.8s;
 }
 .our-products-list,
 .our-services-list{
@@ -148,14 +154,13 @@ li {
 }
             /*  gallery */
 .gallery {
-    margin-top: +100px;
+    margin-top: 100px;
     width: 100%;
     height: 450px;
 }
 .gallery .photos-gallery {
     width: 100%;
     height: 100%;
-    
 }
 .gallery .photo1 {
     background: url('https://images.pexels.com/photos/1266831/pexels-photo-1266831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
@@ -340,4 +345,154 @@ li {
     display: none!important; /*!important*/
 }
 
+
+@media(max-width: 765px) {
+/*    navigation     */
+    .navbar {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+    }
+    .navbar-img-background{
+        margin-bottom: 0;
+    }
+    .bcg-nav {
+        height: 50px;
+    }
+    .navbar button {
+        font-size: .8rem;
+    }
+    .navbar li {
+        padding: 3px 8px 5px;
+        font-size: .8rem;
+    }
+    .navbar div {
+        display: grid;
+        grid-template-rows: 50px 0;
+    }
+    .navbar .home-icon div i {
+        font-size: 2.5rem;
+    }
+/*    shared stories     */
+    .shared-stories {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: .4rem;
+    }
+    .bcg-section{
+        padding: 1rem;
+    }
+    .bcg-section h3 {
+        font-size: 1rem;
+        padding-bottom: .4rem;
+    }
+    .shared-stories div h4 {
+        padding: .4rem 0;
+    }
+    .shared-stories div p {
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+/*    gallery     */
+    .gallery {
+        margin-top: 0;
+        height: 400px;
+    }
+/*     Travel posts     */
+    .bcg-light {
+        margin-top: 0;
+        padding: 1.3rem;
+    }
+    .bcg-light h3 {
+        font-size: 1.1rem;
+        padding-bottom: .6rem;
+    }
+    .travel-posts {
+        grid-gap: 1rem;
+    }
+    .travel-posts h5 {
+        padding: 0.7rem 0;
+        font-size: 1.4rem;
+    }
+    .travel-posts p{
+        line-height: 1.3;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .hamburger-menu-background {
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.95);
+        position: absolute;
+        top: 0;
+        left: -800vh;
+        position: absolute;
+    }
+    .menu-box {
+        margin-top: 30%;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr!important;
+        grid-template-rows: repeat(5, 70px)!important;
+        z-index: 1;
+        position: absolute;
+        left: -800vh;
+    }
+    
+    .hamburger-menu {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        position: absolute;
+        right: 10px;
+        z-index: 5;
+    }
+    .navbar button {
+        font-size: 1.5rem;
+    }
+    .navbar li {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .hamburger-menu .cross-lines {
+        margin: 0 auto;
+        width: 45px;
+        height: 4px;
+        background: #fff;
+        position: relative;
+        background: rgba(265,155,0,0.6);
+        transition: all 0.8s;
+        z-index: 6;
+    }
+    .hamburger-menu:hover .cross-lines {
+        background: rgba(265,155,0,1);
+    }
+    .hamburger-menu:hover {
+        cursor: pointer;
+    }
+    .hamburger-menu .cross1 {
+        top: 9px;
+    }
+    .hamburger-menu .cross2 {
+        bottom: 27px;
+    }
+    .hamburger-menu .cross3 {
+        bottom: 13px;
+    }
+    .hamburger-menu .cross1-menu-shown {
+        top: 23px;
+        transform: rotate(225deg);
+    }
+    .hamburger-menu .cross2-menu-shown {
+        bottom: 27px;
+        opacity: 0;
+    }
+    .hamburger-menu .cross3-menu-shown {
+        bottom: 27px;
+        transform: rotate(-225deg);
+    }
+}
 
