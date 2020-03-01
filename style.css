@@ -1,0 +1,343 @@
+            /* global settings */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Catamaran', sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+li {
+    list-style: none;
+}
+            /*  navbar */
+/* background image */
+.navbar-img-background {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: auto;
+    z-index: -5;
+    background: url('https://images.pexels.com/photos/760680/pexels-photo-760680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: 100px;
+}
+.bcg-nav {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    background: rgba(0,0,0,0.87);
+    z-index: 1;
+}
+.navbar {
+    display: grid;
+    grid-template-columns: 100px repeat(5, minmax(auto, 1fr));
+}
+.navbar div {
+    display: grid;
+    grid-template-rows: 70px 0;
+}
+.navbar .home-icon div a {
+    margin: auto;
+    grid-row: 1/2;
+}
+.navbar .home-icon div i {
+    font-size: 4rem;
+    text-align: center;
+    margin: auto;
+    color: rgba(265,155,0,0.6);
+    -webkit-transition: transform 0.35s ease-in-out;
+}
+.navbar .home-icon div:hover {
+    cursor: pointer;
+
+}
+.navbar .home-icon div:hover i {
+    color: rgba(265,155,0,1);
+    transform: rotate(360deg);
+    -webkit-transition: transform 0.35s ease-in-out;
+}
+.navbar button {
+    font-size: 1.4rem;
+    background: rgba(0,0,0,0);
+    color: #fff;
+    border: none;
+    text-transform:uppercase
+}
+.navbar button:hover {
+    background: rgba(265,155,0,0.7);
+    cursor: pointer;
+}
+.navbar li {
+    background: rgba(0,0,0,0.87);
+    padding: 3px 15px 5px;
+    color: #fff;
+    width: 100%;
+}
+.navbar li:hover {
+    cursor: pointer;
+    background: rgba(265,155,0,0.7);
+}
+.our-products-list,
+.our-services-list{
+    position: relative;
+    top: -6000px;
+}
+.our-products:hover .our-products-list,
+.our-services:hover .our-services-list{
+    top: 0;
+}
+
+            /* shaed stories */
+.shared-stories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+.bcg-section{
+    background: rgba(0,0,0,0.3);
+    padding: 2rem;
+    margin-top: 0px /* -100px ged rids of white space */
+}
+.bcg-section h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+.shared-stories div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shared-stories div h4 {
+    padding: 1rem 0;
+}
+.shared-stories div p {
+    text-align: center;
+}
+.story-img{    
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
+}
+.story1-img {
+    background: url('https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+    background-position:top;
+}
+.story2-img {
+    background: url('https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+    background-position:top;
+}
+.story3-img {
+    background: url('https://images.pexels.com/photos/2518748/pexels-photo-2518748.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+    background-position: center;
+}
+            /*  gallery */
+.gallery {
+    margin-top: +100px;
+    width: 100%;
+    height: 450px;
+}
+.gallery .photos-gallery {
+    width: 100%;
+    height: 100%;
+    
+}
+.gallery .photo1 {
+    background: url('https://images.pexels.com/photos/1266831/pexels-photo-1266831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+.gallery .photo2 {
+    background: url('https://images.pexels.com/photos/632522/pexels-photo-632522.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+   /* display: none;  will be changed in JS file */
+}
+.gallery .photo3 {
+    background: url('https://images.pexels.com/photos/221148/pexels-photo-221148.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+   /* display: none;  will be changed in JS file */
+}
+.gallery .photo4 {
+    background: url('https://images.pexels.com/photos/533769/pexels-photo-533769.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.gallery .photo5 {
+    background: url('https://images.pexels.com/photos/982673/pexels-photo-982673.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.show-photo {
+    display: none;
+}
+            /* Travel posts */
+.bcg-light {
+    margin-top: 100px;
+    width: 100%;
+    padding: 2rem;
+    background-color: rgba(0,0,0,0.3);
+}
+.bcg-light h3 {
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+.travel-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px,1fr));
+    grid-gap: 2rem;
+
+}
+.travel-posts h5 {
+    padding: 0.7rem 0;
+    font-size: 1.5rem;
+}
+.travel-posts div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 30px;
+}
+.travel-posts div:hover {
+    cursor: pointer;
+  background-color: rgba(0,0,0,0.05);
+}
+.travel-posts div:hover h5 {
+    color: #fff;
+}
+.travel-posts div:hover div {
+    opacity: 1;
+    transform: rotate(0deg)
+}
+.travel-posts div div {
+    width: 150px;
+    height: 200px;
+    border-radius: 20px;
+    transform: rotate(-10deg);
+    opacity: 0.5;
+}
+.post1-photo {
+    background: url('https://images.pexels.com/photos/58461/pexels-photo-58461.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+    background-position: center;
+}
+.post2-photo {
+    background: url('https://images.pexels.com/photos/739407/pexels-photo-739407.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+    background-position: center;
+}
+.post3-photo {
+    background: url('https://images.pexels.com/photos/756790/pexels-photo-756790.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+}
+.post4-photo {
+    background: url('https://images.pexels.com/photos/1485630/pexels-photo-1485630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+}
+.post5-photo {
+    background: url('https://images.pexels.com/photos/819764/pexels-photo-819764.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+}
+.post6-photo {
+    background: url('https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+}
+.post7-photo {
+    background: url('https://images.pexels.com/photos/356844/pexels-photo-356844.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+}
+.post8-photo {
+    background: url('https://images.pexels.com/photos/2449549/pexels-photo-2449549.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+}
+.post9-photo {
+    background: url('https://images.pexels.com/photos/2830460/pexels-photo-2830460.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+}
+.post10-photo {
+    background: url('https://images.pexels.com/photos/450597/pexels-photo-450597.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+}
+.post11-photo {
+    background: url('https://images.pexels.com/photos/236294/pexels-photo-236294.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+    background-position: center;
+}
+.post12-photo {
+    background: url('https://images.pexels.com/photos/34098/south-africa-hluhluwe-giraffes-pattern.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+}
+/* btn-show.more */
+.btn-section {
+    margin-top: 4rem;
+    width: 100%;
+    height: 0.0005px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    position: relative;
+}
+.btn-section .btn-show-more {
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-width: 160px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 20px;
+    border: 3px solid black;
+    background: #222;
+    color: #eee;
+    white-space: nowrap;
+}
+.show-more-sticky {
+    position: sticky;
+    bottom: 2.5rem;
+    margin-top: 8rem; /* makes it possible to stop an element 8 rem units before top border of its parent  */
+    margin-bottom: -2rem;
+
+}
+.btn-section .btn-show-more:hover{
+    color: #fff;
+    cursor: pointer;
+    border: 3px solid #fff;
+}
+/* travel posts hidden */
+.post-hidden{
+    display: none!important; /*!important*/
+}
+
+
